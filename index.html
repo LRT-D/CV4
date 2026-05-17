@@ -93,15 +93,29 @@
             letter-spacing: 2.5px;
         }
 
-        .motivation {
-            font-style: italic;
-            font-size: 1.05rem;
+        .motivation-container {
             max-width: 650px;
             margin: 0 auto 3rem auto;
-            color: #dbeafe;
             padding: 1.5rem;
             border-top: 1px solid rgba(255, 255, 255, 0.15);
             border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .motivation-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--color-accent);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .motivation {
+            font-style: italic;
+            font-size: 1.05rem;
+            color: #dbeafe;
+            line-height: 1.5;
         }
 
         .orcid-badge {
@@ -366,8 +380,11 @@
             <h1>Laurent Desmet</h1>
             <p class="subtitle">PhD Candidate • Primary Care Nurse</p>
             
-            <div class="motivation">
-                "To explore, evolve and sustainably implement the nursing role in general practices."
+            <div class="motivation-container">
+                <span class="motivation-label">Personal Motivation</span>
+                <p class="motivation">
+                    "To explore, evolve and sustainably implement the nursing role in general practices."
+                </p>
             </div>
 
             <a href="https://orcid.org/0009-0005-6488-2609" target="_blank" rel="noopener noreferrer" class="orcid-badge">
