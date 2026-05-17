@@ -7,11 +7,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Updated to a lighter professional blue tone */
-            --color-primary: #1e3a5f; /* Deep Navy for text */
-            --color-accent: #5ba4cf;  /* Light Blue / Sky Blue */
+            --color-primary: #1e3a5f; 
+            --color-accent: #5ba4cf;  
             --color-accent-hover: #4a8eb8;
-            --color-bg-light: #f0f7fa; /* Very light blue background */
+            --color-bg-light: #f4f9fc; 
             --color-text: #2c3e50;
             --color-text-light: #5d6d7e;
             --color-white: #ffffff;
@@ -30,49 +29,13 @@
             background-color: var(--color-bg-light);
             color: var(--color-text);
             line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-
-        /* Timeline Styling */
-        .timeline {
-            position: relative;
-            padding-left: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 7px;
-            top: 5px;
-            bottom: 5px;
-            width: 2px;
-            background-color: var(--color-accent);
-            opacity: 0.3;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 1.5rem;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -2rem;
-            top: 6px;
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            background: var(--color-accent);
-            z-index: 1;
         }
 
         /* Header Section */
         header {
             background-color: var(--color-primary);
             color: var(--color-white);
-            padding: 5rem 2rem 6rem;
+            padding: 5rem 2rem 10rem;
             text-align: center;
             position: relative;
         }
@@ -82,32 +45,42 @@
             margin: 0 auto;
         }
 
+        .cv-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: var(--color-accent);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
         h1 {
-            font-size: clamp(2.5rem, 8vw, 3.5rem);
+            font-size: clamp(2.5rem, 8vw, 4rem);
             font-weight: 700;
             margin-bottom: 0.5rem;
             letter-spacing: -1px;
-            color: var(--color-white);
         }
 
         .subtitle {
             font-size: 1.1rem;
             font-weight: 400;
-            color: var(--color-accent);
-            margin-bottom: 1.5rem;
+            color: var(--color-white);
+            opacity: 0.85;
+            margin-bottom: 2rem;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 2.5px;
         }
 
         .motivation {
             font-style: italic;
             font-size: 1.05rem;
             max-width: 650px;
-            margin: 0 auto 2.5rem auto;
+            margin: 0 auto 3rem auto;
             color: #dbeafe;
-            padding: 1.25rem;
-            border-top: 1px solid rgba(91, 164, 207, 0.3);
-            border-bottom: 1px solid rgba(91, 164, 207, 0.3);
+            padding: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
         }
 
         .orcid-badge {
@@ -116,7 +89,7 @@
             gap: 10px;
             background: var(--color-accent);
             color: var(--color-white);
-            padding: 0.7rem 1.4rem;
+            padding: 0.8rem 1.6rem;
             border-radius: 4px;
             font-weight: 600;
             font-size: 0.85rem;
@@ -129,11 +102,11 @@
             transform: translateY(-2px);
         }
 
-        /* Layout */
+        /* Layout and Spacing */
         .container {
             max-width: 1100px;
-            margin: -3rem auto 0;
-            padding: 0 2rem 4rem;
+            margin: -5rem auto 0;
+            padding: 0 2rem 6rem;
             position: relative;
             z-index: 10;
         }
@@ -141,7 +114,8 @@
         .main-grid {
             display: grid;
             grid-template-columns: 1.3fr 0.7fr;
-            gap: 2.5rem;
+            gap: 3.5rem; 
+            margin-top: 3rem;
         }
 
         @media (max-width: 900px) {
@@ -153,13 +127,11 @@
             }
         }
 
-        /* Section Headers */
+        /* Content Blocks */
         .section-header {
-            margin: 2.5rem 0 1.5rem;
+            margin: 3.5rem 0 1.8rem;
             border-bottom: 2px solid var(--color-accent);
-            padding-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
+            padding-bottom: 0.6rem;
         }
 
         .section-header h2 {
@@ -170,21 +142,52 @@
             letter-spacing: 1.5px;
         }
 
-        /* Card Styling */
         .card {
             background: var(--color-white);
-            border-radius: 4px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-            border: 1px solid #d6e4e8;
-            margin-bottom: 1rem;
+            border-radius: 8px;
+            padding: 1.8rem;
+            box-shadow: 0 10px 30px rgba(30, 58, 95, 0.05);
+            border: 1px solid #e1e9ee;
+            margin-bottom: 1.5rem;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 5px;
+            bottom: 5px;
+            width: 2px;
+            background-color: var(--color-accent);
+            opacity: 0.3;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 1.8rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 8px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--color-accent);
+            z-index: 2;
         }
 
         .item-meta {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 0.25rem;
         }
 
         .item-title {
@@ -205,36 +208,25 @@
             font-size: 0.9rem;
             color: var(--color-text-light);
             display: block;
+            margin-top: 0.2rem;
         }
 
         /* Thesis List */
         .thesis-item {
             margin-bottom: 1rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #eef3f6;
             display: flex;
-            gap: 12px;
-        }
-
-        .thesis-item:last-child { border-bottom: none; }
-
-        .thesis-icon {
-            color: var(--color-accent);
-            flex-shrink: 0;
-            margin-top: 4px;
-        }
-
-        .thesis-title {
-            font-size: 0.85rem;
-            font-weight: 500;
+            gap: 14px;
+            font-size: 0.9rem;
             line-height: 1.4;
         }
 
+        .thesis-icon { color: var(--color-accent); flex-shrink: 0; }
+
         /* Publications */
         .pub-item {
-            margin-bottom: 1.25rem;
-            padding-left: 1rem;
-            border-left: 2px solid #e1e8e7;
+            margin-bottom: 1.5rem;
+            padding-left: 1.2rem;
+            border-left: 3px solid #e1e9ee;
         }
 
         .pub-link {
@@ -244,88 +236,73 @@
             text-decoration: none;
             display: inline-block;
             margin-top: 0.4rem;
+            transition: var(--transition);
         }
 
-        /* Languages */
-        .lang-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
+        .pub-link:hover {
+            color: var(--color-accent-hover);
+            text-decoration: underline;
         }
 
-        .lang-card {
-            background: #e9f2f7;
-            padding: 0.8rem;
-            border-radius: 4px;
-            border-left: 3px solid var(--color-accent);
-        }
-
-        .lang-name {
-            display: block;
+        .small-title {
+            font-size: 0.85rem;
             font-weight: 700;
             color: var(--color-primary);
-            font-size: 0.9rem;
-        }
-
-        .lang-level {
-            font-size: 0.75rem;
-            color: var(--color-text-light);
             text-transform: uppercase;
-            font-weight: 600;
+            margin: 2.5rem 0 1rem;
+            display: block;
+            letter-spacing: 1.2px;
         }
 
-        /* Hobbies Section */
+        /* Hobbies */
         .hobbies-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
             gap: 1.5rem;
-            margin-top: 1rem;
         }
 
         .hobby-item {
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: center;
+            padding: 1.8rem;
             background: var(--color-white);
-            padding: 1.5rem;
-            border-radius: 4px;
-            border: 1px solid #d6e4e8;
+            border-radius: 8px;
+            border: 1px solid #e1e9ee;
             transition: var(--transition);
         }
 
         .hobby-item:hover {
-            transform: translateY(-5px);
             border-color: var(--color-accent);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(91, 164, 207, 0.1);
         }
 
         .hobby-icon {
             width: 44px;
             height: 44px;
-            margin-bottom: 0.75rem;
+            margin-bottom: 1rem;
             color: var(--color-accent);
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .hobby-name {
             font-size: 0.85rem;
             font-weight: 700;
-            color: var(--color-primary);
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
-        /* Footers */
-        .small-title {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: var(--color-primary);
-            text-transform: uppercase;
-            margin: 1.5rem 0 0.75rem;
-            display: block;
-            letter-spacing: 1px;
+        /* Presentation Grid */
+        .pres-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .pres-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
     </style>
@@ -334,6 +311,7 @@
 
     <header>
         <div class="header-content">
+            <div class="cv-label">Curriculum Vitae</div>
             <h1>Laurent Desmet</h1>
             <p class="subtitle">PhD Candidate • Primary Care Nurse</p>
             
@@ -342,7 +320,7 @@
             </div>
 
             <a href="https://orcid.org/0009-0005-6488-2609" target="_blank" rel="noopener noreferrer" class="orcid-badge">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right:8px;"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg>
                 ORCID iD: 0009-0005-6488-2609
             </a>
         </div>
@@ -350,8 +328,8 @@
 
     <div class="container">
         <div class="main-grid">
-            <!-- Left: Primary Experience -->
-            <div class="flow-container">
+            <!-- Left Column -->
+            <div class="content-left">
                 <div class="section-header">
                     <h2>Professional Experience</h2>
                 </div>
@@ -389,7 +367,7 @@
                                 <span class="item-title">Primary Care Nurse</span>
                                 <span class="item-year">2021 - 2023</span>
                             </div>
-                            <span class="item-org">Geneeskunde voor het volk Deurne (non-profit primary healthcare organisation)</span>
+                            <span class="item-org">Geneeskunde voor het volk Deurne</span>
                         </div>
                     </div>
                     <div class="timeline-item">
@@ -398,7 +376,7 @@
                                 <span class="item-title">Climbing Instructor</span>
                                 <span class="item-year">2014 - 2017</span>
                             </div>
-                            <span class="item-org">Klimzaal Biover Gent (indoor climbing gym)</span>
+                            <span class="item-org">Klimzaal Biover Gent</span>
                         </div>
                     </div>
                 </div>
@@ -410,28 +388,19 @@
                     <div class="timeline-item">
                         <div class="card">
                             <div class="item-meta">
-                                <span class="item-title">Swedish Language Course</span>
-                                <span class="item-year">2023</span>
-                            </div>
-                            <span class="item-org">Linguapolis - Encora</span>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="card">
-                            <div class="item-meta">
-                                <span class="item-title">Master in Nursing (Greatest Distinction)</span>
+                                <span class="item-title">Master in Nursing</span>
                                 <span class="item-year">2021 - 2023</span>
                             </div>
-                            <span class="item-org">Antwerp University</span>
+                            <span class="item-org">Antwerp University (Greatest Distinction)</span>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="card">
                             <div class="item-meta">
-                                <span class="item-title">Bachelor in Nursing (Greatest Distinction)</span>
+                                <span class="item-title">Bachelor in Nursing</span>
                                 <span class="item-year">2017 - 2021</span>
                             </div>
-                            <span class="item-org">Artesis Plantijn University of Applied Sciences</span>
+                            <span class="item-org">Artesis Plantijn University (Greatest Distinction)</span>
                         </div>
                     </div>
                     <div class="timeline-item">
@@ -451,110 +420,93 @@
                 <div class="card">
                     <div class="thesis-item">
                         <span class="thesis-icon">◈</span>
-                        <span class="thesis-title">Comparison of PROMs between nurse-led and GP-led infection consultations</span>
+                        <span>Comparison of PROMs between nurse-led and GP-led infection consultations</span>
                     </div>
                     <div class="thesis-item">
                         <span class="thesis-icon">◈</span>
-                        <span class="thesis-title">Nurses' experiences in providing non-pharmacological advice during an infection consultation</span>
+                        <span>Nurses' experiences in providing non-pharmacological advice during an infection consultation</span>
                     </div>
                     <div class="thesis-item">
                         <span class="thesis-icon">◈</span>
-                        <span class="thesis-title">A qualitative process evaluation of practice-facilitating workshops using the COM-B model and Kotter's 8 steps</span>
+                        <span>A qualitative process evaluation of practice-facilitating workshops using the COM-B model and Kotter's 8 steps</span>
                     </div>
                     <div class="thesis-item">
                         <span class="thesis-icon">◈</span>
-                        <span class="thesis-title">Transforming a checklist into an evaluation tool for assessing the quality of general practice protocols</span>
+                        <span>Transforming a checklist into an evaluation tool for assessing the quality of general practice protocols</span>
                     </div>
                     <div class="thesis-item">
                         <span class="thesis-icon">◈</span>
-                        <span class="thesis-title">Factors influencing GPs in providing non-pharmacological advice during infection consultations</span>
+                        <span>Factors influencing GPs in providing non-pharmacological advice during infection consultations</span>
                     </div>
                     <div class="thesis-item">
                         <span class="thesis-icon">◈</span>
-                        <span class="thesis-title">Validation of an evaluation tool for assessing the quality of general practice protocols</span>
+                        <span>Validation of an evaluation tool for assessing the quality of general practice protocols</span>
                     </div>
                     <div class="thesis-item">
                         <span class="thesis-icon">◈</span>
-                        <span class="thesis-title">The role of the receptionist in the Flemish general practice</span>
+                        <span>The role of the receptionist in Flemish general practice</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Right: Sidebar Data -->
-            <div>
+            <!-- Right Column -->
+            <div class="content-right">
                 <div class="section-header">
                     <h2>Languages</h2>
                 </div>
-                <div class="lang-grid">
-                    <div class="lang-card">
-                        <span class="lang-name">Dutch</span>
-                        <span class="lang-level">Native</span>
-                    </div>
-                    <div class="lang-card">
-                        <span class="lang-name">English</span>
-                        <span class="lang-level">Proficient</span>
-                    </div>
-                    <div class="lang-card">
-                        <span class="lang-name">Swedish</span>
-                        <span class="lang-level">Basic</span>
-                    </div>
-                    <div class="lang-card">
-                        <span class="lang-name">French</span>
-                        <span class="lang-level">Basic</span>
-                    </div>
+                <div class="card" style="display:grid; grid-template-columns: 1fr 1fr; gap:12px;">
+                    <div style="font-size:0.85rem;"><strong>Dutch</strong><br><small>Native</small></div>
+                    <div style="font-size:0.85rem;"><strong>English</strong><br><small>Proficient</small></div>
+                    <div style="font-size:0.85rem;"><strong>Swedish</strong><br><small>Basic</small></div>
+                    <div style="font-size:0.85rem;"><strong>French</strong><br><small>Basic</small></div>
                 </div>
 
                 <span class="small-title">Scientific Milestones</span>
                 <div class="card">
                     <div class="pub-item">
-                        <div class="item-meta">
-                            <span class="item-title" style="font-size:0.95rem;">SofinaBoël Fellowship</span>
-                            <span class="item-year">2026</span>
-                        </div>
+                        <div class="item-meta"><span class="item-title" style="font-size:0.9rem;">SofinaBoël Fellowship</span><span class="item-year">2026</span></div>
                         <p style="font-size:0.75rem;">One-year research project abroad</p>
                     </div>
                     <div class="pub-item">
-                        <div class="item-meta">
-                            <span class="item-title" style="font-size:0.95rem;">Young Researcher Award</span>
-                            <span class="item-year">2025</span>
-                        </div>
+                        <div class="item-meta"><span class="item-title" style="font-size:0.9rem;">Young Researcher Award</span><span class="item-year">2025</span></div>
                         <p style="font-size:0.75rem;">European forum for primary care (EFPC)</p>
                     </div>
                     <div class="pub-item">
-                        <div class="item-meta">
-                            <span class="item-title" style="font-size:0.95rem;">Ebpracticenet Grant</span>
-                            <span class="item-year">2025</span>
-                        </div>
-                        <p style="font-size:0.75rem;">€30.000 for Chronic Care implementation</p>
+                        <div class="item-meta"><span class="item-title" style="font-size:0.9rem;">Ebpracticenet Grant</span><span class="item-year">2025</span></div>
+                        <p style="font-size:0.75rem;">€30.000 for implementation project</p>
                     </div>
-                    <div class="pub-item" style="border:none; margin:0;">
-                        <div class="item-meta">
-                            <span class="item-title" style="font-size:0.95rem;">Academic Thesis Award</span>
-                            <span class="item-year">2023</span>
-                        </div>
-                        <p style="font-size:0.75rem;">Most academic thesis, Antwerp University</p>
+                    <div class="pub-item" style="border:none; margin-bottom:0;">
+                        <div class="item-meta"><span class="item-title" style="font-size:0.9rem;">Academic Thesis Award</span><span class="item-year">2023</span></div>
+                        <p style="font-size:0.75rem;">Antwerp University</p>
+                    </div>
+                </div>
+
+                <span class="small-title">Scientific Publications</span>
+                <div class="card">
+                    <div class="pub-item">
+                        <p style="font-size: 0.8rem;">Desmet, L., et al. (2025). <strong>Adopting tailored interprofessional protocols in general practice: A mixed-methods process evaluation.</strong> BMC Health Serv Res.</p>
+                        <a href="https://doi.org/10.1186/s12913-025-13424-y" target="_blank" class="pub-link">DOI: 10.1186/s12913-025-13424-y</a>
+                    </div>
+                    <div class="pub-item">
+                        <p style="font-size: 0.8rem;">Vergauwen, J., et al. (2025). <strong>Evaluating the effectiveness of lifestyle education for individuals at increased risk of type 2 diabetes and cardiovascular diseases (Halt2Diabetes): protocol for a repeated measures study.</strong> BMC Public Health.</p>
+                        <a href="https://doi.org/10.1186/s12889-025-24462-w" target="_blank" class="pub-link">DOI: 10.1186/s12889-025-24462-w</a>
+                    </div>
+                    <div class="pub-item" style="border:none; margin-bottom:0;">
+                        <p style="font-size: 0.8rem;">Desmet, L., et al. (2024). <strong>Task redistribution from general practitioners to nurses in acute infection care: A prospective cohort study.</strong> Journal of Advanced Nursing.</p>
+                        <a href="https://doi.org/10.1111/jan.16075" target="_blank" class="pub-link">DOI: 10.1111/jan.16075</a>
                     </div>
                 </div>
 
                 <span class="small-title">Professional Certificates</span>
                 <div class="card">
-                    <div style="font-size:0.8rem; display:grid; gap:10px;">
+                    <div style="font-size:0.8rem; display:grid; gap:12px;">
                         <div><strong>Generative AI for research productivity</strong><br><small>The GRAPH Courses, 2026</small></div>
                         <div><strong>AI in Qualitative Research</strong><br><small>FLAMES, 2026</small></div>
-                        <div><strong>Implementation Science in Global Health</strong><br><small>Utrecht University, 2024</small></div>
+                        <div><strong>Implementation Science</strong><br><small>Utrecht University, 2024</small></div>
                         <div><strong>Process evaluation studies</strong><br><small>FLAMES, 2024</small></div>
-                    </div>
-                </div>
-
-                <span class="small-title">Full Publications</span>
-                <div class="card">
-                    <div class="pub-item">
-                        <p style="font-size: 0.8rem;">Desmet, L., et al. (2025). <strong>Adopting tailored interprofessional protocols in general practice...</strong> BMC Health Serv Res.</p>
-                        <a href="https://doi.org/10.1186/s12913-025-13424-y" target="_blank" class="pub-link">DOI Link</a>
-                    </div>
-                    <div class="pub-item" style="border:none; margin-bottom:0;">
-                        <p style="font-size: 0.8rem;">Desmet, L., et al. (2024). <strong>Task redistribution from general practitioners to nurses...</strong> Journal of Advanced Nursing.</p>
-                        <a href="https://doi.org/10.1111/jan.16075" target="_blank" class="pub-link">DOI Link</a>
+                        <div><strong>ECG</strong><br><small>Antwerp University, 2020</small></div>
+                        <div><strong>Intercultural communication</strong><br><small>ZHAW Zurich University of Applied Science, 2019</small></div>
+                        <div><strong>Transcultural nursing</strong><br><small>Zaragoza San Jorge University, 2018</small></div>
                     </div>
                 </div>
             </div>
@@ -563,21 +515,41 @@
         <div class="section-header">
             <h2>Scientific Presentations</h2>
         </div>
-        <div class="card" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-            <div>
-                <span class="item-year">Sept 2025</span>
-                <p style="font-weight:700; font-size:0.95rem;">EFPC - Vienna</p>
-                <p style="font-size:0.8rem; color:var(--color-text-light);">Complexity of practice-tailored protocols: a qualitative exploration of experiences in Flanders</p>
+        <div class="pres-grid">
+            <div class="card pres-card">
+                <div>
+                    <span class="item-year">Sept 2025</span>
+                    <p style="font-weight:700; margin-top:0.3rem;">EFPC - Vienna (International)</p>
+                    <p style="font-size:0.85rem; color:var(--color-text-light); margin-top:0.5rem;">The complexity of developing and implementing practice-tailored protocols in an interdisciplinary general practice</p>
+                </div>
             </div>
-            <div>
-                <span class="item-year">Nov 2024</span>
-                <p style="font-weight:700; font-size:0.95rem;">Speak Up - Brussels</p>
-                <p style="font-size:0.8rem; color:var(--color-text-light);">Transition towards interdisciplinary protocol-based care in general practice</p>
+            <div class="card pres-card">
+                <div>
+                    <span class="item-year">Nov 2024</span>
+                    <p style="font-weight:700; margin-top:0.3rem;">Speak Up - Brussels (National)</p>
+                    <p style="font-size:0.85rem; color:var(--color-text-light); margin-top:0.5rem;">Transition towards interdisciplinary, tailored, practice protocols</p>
+                </div>
             </div>
-            <div>
-                <span class="item-year">Sept 2024</span>
-                <p style="font-weight:700; font-size:0.95rem;">WONCA - Dublin</p>
-                <p style="font-size:0.8rem; color:var(--color-text-light);">Navigating chronic care complexity: a mixed-methods process evaluation</p>
+            <div class="card pres-card">
+                <div>
+                    <span class="item-year">Sept 2024</span>
+                    <p style="font-weight:700; margin-top:0.3rem;">WONCA - Dublin (International)</p>
+                    <p style="font-size:0.85rem; color:var(--color-text-light); margin-top:0.5rem;">Navigating the complexity of chronic care management in general practices</p>
+                </div>
+            </div>
+            <div class="card pres-card">
+                <div>
+                    <span class="item-year">June 2024</span>
+                    <p style="font-weight:700; margin-top:0.3rem;">EQUIP - Ghent (International)</p>
+                    <p style="font-size:0.85rem; color:var(--color-text-light); margin-top:0.5rem;">Facilitating integrated primary healthcare: an instrument to develop tailored and integrated care pathways</p>
+                </div>
+            </div>
+            <div class="card pres-card">
+                <div>
+                    <span class="item-year">Feb 2024</span>
+                    <p style="font-weight:700; margin-top:0.3rem;">CARE4 - Antwerp (International)</p>
+                    <p style="font-size:0.85rem; color:var(--color-text-light); margin-top:0.5rem;">Task redistribution from general practitioners to nurses in acute infection care: a prospective cohort study</p>
+                </div>
             </div>
         </div>
 
@@ -586,27 +558,19 @@
         </div>
         <div class="hobbies-grid">
             <div class="hobby-item">
-                <div class="hobby-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 11l-5-5-5 5M17 18l-5-5-5 5"/></svg>
-                </div>
+                <svg class="hobby-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 11l-5-5-5 5M17 18l-5-5-5 5"/></svg>
                 <span class="hobby-name">Trekking</span>
             </div>
             <div class="hobby-item">
-                <div class="hobby-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3M12 8v8m-4-4h8"/></svg>
-                </div>
+                <svg class="hobby-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3M12 8v8m-4-4h8"/></svg>
                 <span class="hobby-name">Freediving</span>
             </div>
             <div class="hobby-item">
-                <div class="hobby-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M12 2v20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93"/></svg>
-                </div>
+                <svg class="hobby-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M12 2v20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93"/></svg>
                 <span class="hobby-name">Winter Sport</span>
             </div>
             <div class="hobby-item">
-                <div class="hobby-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><circle cx="15.5" cy="15.5" r="1.5"/><circle cx="8.5" cy="15.5" r="1.5"/><circle cx="15.5" cy="8.5" r="1.5"/></svg>
-                </div>
+                <svg class="hobby-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><circle cx="15.5" cy="15.5" r="1.5"/><circle cx="8.5" cy="15.5" r="1.5"/><circle cx="15.5" cy="8.5" r="1.5"/></svg>
                 <span class="hobby-name">Board Games</span>
             </div>
         </div>
@@ -624,8 +588,8 @@
 
         document.querySelectorAll('.timeline-item, .card, .hobby-item').forEach(el => {
             el.style.opacity = '0';
-            el.style.transform = 'translateY(15px)';
-            el.style.transition = 'all 0.5s ease-out';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease-out';
             observer.observe(el);
         });
     </script>
