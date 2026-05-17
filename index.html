@@ -22,6 +22,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            scroll-behavior: smooth;
         }
 
         body {
@@ -35,7 +36,7 @@
         header {
             background-color: var(--color-primary);
             color: var(--color-white);
-            padding: 4rem 2rem 10rem;
+            padding: 4rem 2rem 6rem;
             text-align: center;
             position: relative;
         }
@@ -122,10 +123,45 @@
             transform: translateY(-2px);
         }
 
+        /* Navigation Bar */
+        nav {
+            background: var(--color-white);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+
+        .nav-links {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            list-style: none;
+            padding: 0 1rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-text-light);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
         /* Layout and Spacing */
         .container {
             max-width: 1100px;
-            margin: -5rem auto 0;
+            margin: 2rem auto 0;
             padding: 0 2rem 6rem;
             position: relative;
             z-index: 10;
@@ -135,15 +171,14 @@
             display: grid;
             grid-template-columns: 1.3fr 0.7fr;
             gap: 3.5rem; 
-            margin-top: 3rem;
         }
 
         @media (max-width: 900px) {
             .main-grid {
                 grid-template-columns: 1fr;
             }
-            .container {
-                margin-top: 0;
+            .nav-links {
+                gap: 0.8rem;
             }
         }
 
@@ -152,6 +187,7 @@
             margin: 3.5rem 0 1.8rem;
             border-bottom: 2px solid var(--color-accent);
             padding-bottom: 0.6rem;
+            scroll-margin-top: 100px; /* Offset for sticky nav */
         }
 
         .section-header h2 {
@@ -264,16 +300,6 @@
             text-decoration: underline;
         }
 
-        .small-title {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: var(--color-primary);
-            text-transform: uppercase;
-            margin: 2.5rem 0 1rem;
-            display: block;
-            letter-spacing: 1.2px;
-        }
-
         /* Hobbies */
         .hobbies-grid {
             display: grid;
@@ -329,7 +355,7 @@
 </head>
 <body>
 
-    <header>
+    <header id="top">
         <div class="header-content">
             <!-- Profile Image -->
             <div class="avatar-container">
@@ -351,12 +377,25 @@
         </div>
     </header>
 
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#mentorship">Mentorship</a></li>
+            <li><a href="#milestones">Milestones</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#presentations">Presentations</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
         <div class="main-grid">
             <!-- Left Column -->
             <div class="content-left">
-                <div class="section-header">
-                    <h2>Professional Experience</h2>
+                <div class="section-header" id="experience">
+                    <h2>Experience</h2>
                 </div>
                 <div class="timeline">
                     <div class="timeline-item">
@@ -406,8 +445,8 @@
                     </div>
                 </div>
 
-                <div class="section-header">
-                    <h2>Educational Background</h2>
+                <div class="section-header" id="education">
+                    <h2>Education</h2>
                 </div>
                 <div class="timeline">
                     <div class="timeline-item">
@@ -425,7 +464,7 @@
                                 <span class="item-title">Bachelor in Nursing</span>
                                 <span class="item-year">2017 - 2021</span>
                             </div>
-                            <span class="item-org">Artesis Plantijn University (Greatest Distinction)</span>
+                            <span class="item-org">Artesis Plantijn University of Applied Sciences (Greatest Distinction)</span>
                         </div>
                     </div>
                     <div class="timeline-item">
@@ -434,13 +473,13 @@
                                 <span class="item-title">Bachelor in Physical Education</span>
                                 <span class="item-year">2010 - 2014</span>
                             </div>
-                            <span class="item-org">Artevelde University of Applied Sciences</span>
+                            <span class="item-org">Artevelde University of Applied Sciences Ghent</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="section-header">
-                    <h2>Scientific Mentorship</h2>
+                <div class="section-header" id="mentorship">
+                    <h2>Scientific Mentorship <span style="font-size: 0.8em; font-weight: 500; text-transform: none; color: var(--color-text-light); opacity: 0.95; display: inline-block; margin-left: 0.4rem; font-style: normal;">(Master's theses)</span></h2>
                 </div>
                 <div class="card">
                     <div class="thesis-item">
@@ -486,7 +525,9 @@
                     <div style="font-size:0.85rem;"><strong>French</strong><br><small>Basic</small></div>
                 </div>
 
-                <span class="small-title">Scientific Milestones</span>
+                <div class="section-header" id="milestones">
+                    <h2>Scientific Milestones</h2>
+                </div>
                 <div class="card">
                     <div class="pub-item">
                         <div class="item-meta"><span class="item-title" style="font-size:0.9rem;">SofinaBoël Fellowship</span><span class="item-year">2026</span></div>
@@ -498,7 +539,7 @@
                     </div>
                     <div class="pub-item">
                         <div class="item-meta"><span class="item-title" style="font-size:0.9rem;">Ebpracticenet Grant</span><span class="item-year">2025</span></div>
-                        <p style="font-size:0.75rem;">€30.000 for implementation project</p>
+                        <p style="font-size:0.75rem;">€30,000 for implementation project</p>
                     </div>
                     <div class="pub-item" style="border:none; margin-bottom:0;">
                         <div class="item-meta"><span class="item-title" style="font-size:0.9rem;">Academic Thesis Award</span><span class="item-year">2023</span></div>
@@ -506,7 +547,9 @@
                     </div>
                 </div>
 
-                <span class="small-title">Scientific Publications</span>
+                <div class="section-header" id="publications">
+                    <h2>Scientific Publications</h2>
+                </div>
                 <div class="card">
                     <div class="pub-item">
                         <p style="font-size: 0.8rem;">Desmet, L., et al. (2025). <strong>Adopting tailored interprofessional protocols in general practice: A mixed-methods process evaluation.</strong> BMC Health Serv Res.</p>
@@ -522,7 +565,9 @@
                     </div>
                 </div>
 
-                <span class="small-title">Professional Certificates</span>
+                <div class="section-header" id="certificates">
+                    <h2>Certificates</h2>
+                </div>
                 <div class="card">
                     <div style="font-size:0.8rem; display:grid; gap:12px;">
                         <div><strong>Generative AI for research productivity</strong><br><small>The GRAPH Courses, 2026</small></div>
@@ -537,7 +582,7 @@
             </div>
         </div>
 
-        <div class="section-header">
+        <div class="section-header" id="presentations">
             <h2>Scientific Presentations</h2>
         </div>
         <div class="pres-grid">
@@ -578,7 +623,7 @@
             </div>
         </div>
 
-        <div class="section-header">
+        <div class="section-header" id="hobbies">
             <h2>Hobbies</h2>
         </div>
         <div class="hobbies-grid">
